@@ -133,7 +133,7 @@ export const TurnifyApprovalCheck: React.FC<TurnifyApprovalCheckProps> = ({ sele
                   </div>
                   <div className="text-right">
                     <p className="font-medium">Qty: {item.return_qty || 1}</p>
-                    <p className="text-sm text-gray-600">${item.price || 'TBD'} each</p>
+                    <p className="text-sm text-gray-600">${item.price ? Number(item.price).toFixed(2) : 'TBD'} each</p>
                   </div>
                 </div>
               ))}

@@ -89,7 +89,7 @@ export const TurnifyViewReturns: React.FC<TurnifyViewReturnsProps> = React.memo(
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="font-semibold text-lg">${returnItem.total_value}</p>
+                  <p className="font-semibold text-lg">${Number(returnItem.total_value).toFixed(2)}</p>
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                     returnItem.status === 'approved' ? 'bg-green-100 text-green-800' :
                     returnItem.status === 'pending' ? 'bg-yellow-100 text-yellow-800' : 

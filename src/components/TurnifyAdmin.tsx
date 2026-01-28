@@ -34,7 +34,7 @@ export const TurnifyAdmin: React.FC<TurnifyAdminProps> = ({ returnsData, navigat
             <div className="flex justify-between items-start mb-4">
               <div>
                 <h3 className="font-semibold text-lg">{returnItem.rma_number}</h3>
-                <p className="text-gray-600">{returnItem.po_number} • ${returnItem.total_value}</p>
+                <p className="text-gray-600">{returnItem.po_number} • ${Number(returnItem.total_value).toFixed(2)}</p>
                 <p className="text-sm text-gray-500">Created: {returnItem.created_at}</p>
               </div>
               <div className="flex space-x-2">

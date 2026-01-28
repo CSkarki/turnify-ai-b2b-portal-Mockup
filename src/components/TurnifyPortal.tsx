@@ -278,7 +278,7 @@ const OrderItem: React.FC<OrderItemProps> = React.memo(({ item, order, selectedI
         </div>
       </div>
       <div className="text-right">
-        <p className="font-medium">${item.price}</p>
+        <p className="font-medium">${Number(item.price).toFixed(2)}</p>
         <p className="text-sm text-gray-600">Available: {item.available_return}</p>
       </div>
     </div>
@@ -309,7 +309,7 @@ const OrderSection: React.FC<OrderSectionProps> = React.memo(({ order, selectedI
         <div>
           <h3 className="font-semibold">{order.po_number}</h3>
           <p className="text-sm text-gray-600">
-            {order.order_date} • ${order.total.toLocaleString()}
+            {order.order_date} • ${Number(order.total).toFixed(2)}
           </p>
         </div>
         <button 
@@ -604,7 +604,7 @@ const ItemSelectionPage: React.FC<ItemSelectionPageProps> = ({
                       {order.po_number}
                     </td>
                     <td className="px-4 py-2">{order.order_date}</td>
-                    <td className="px-4 py-2">${order.total.toLocaleString()}</td>
+                    <td className="px-4 py-2">${Number(order.total).toFixed(2)}</td>
                     <td className="px-4 py-2">{order.items.length} items</td>
                     <td className="px-4 py-2">
                       <button 
@@ -641,7 +641,7 @@ const ItemSelectionPage: React.FC<ItemSelectionPageProps> = ({
                                 </div>
                                 <div className="flex flex-col gap-2 min-w-[100px]">
                                   <span className="text-xs text-gray-400">Unit Price</span>
-                                  <span className="font-semibold">${item.price}</span>
+                                  <span className="font-semibold">${Number(item.price).toFixed(2)}</span>
                                 </div>
                                 <div className="flex flex-col gap-2 min-w-[100px]">
                                   <span className="text-xs text-gray-400">Return Qty</span>
@@ -946,7 +946,7 @@ const TurnifyPortal = () => {
             </div>
             <div className="bg-white rounded-2xl shadow-lg px-8 py-8 flex flex-col items-center min-w-[170px] max-w-xs">
               <CreditCard className="h-10 w-10 text-green-600 mb-2" />
-              <span className="text-3xl font-bold text-green-700">${sampleAnalytics.totalValue.toLocaleString()}</span>
+              <span className="text-3xl font-bold text-green-700">${Number(sampleAnalytics.totalValue).toFixed(2)}</span>
               <span className="text-base text-gray-500 mt-1">Return Value</span>
             </div>
             <div className="bg-white rounded-2xl shadow-lg px-8 py-8 flex flex-col items-center min-w-[170px] max-w-xs">

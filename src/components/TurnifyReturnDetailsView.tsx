@@ -46,7 +46,7 @@ export const TurnifyReturnDetailsView: React.FC<TurnifyReturnDetailsViewProps> =
             </div>
             <div>
               <p className="text-sm text-gray-600">Total Value</p>
-              <p className="font-medium">${selectedReturn.total_value || '562.50'}</p>
+              <p className="font-medium">${Number(selectedReturn.total_value || 562.50).toFixed(2)}</p>
             </div>
           </div>
         </div>
