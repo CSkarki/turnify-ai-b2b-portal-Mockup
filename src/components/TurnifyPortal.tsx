@@ -1029,16 +1029,16 @@ const TurnifyPortal = () => {
               className="bg-gradient-to-br from-blue-50/80 to-white/80 backdrop-blur-md shadow-xl rounded-2xl border border-blue-100 p-6 mb-8 max-w-md mx-auto md:mx-0 md:fixed md:right-8 md:top-28 md:w-96 animate-fade-in z-20"
               style={{ transition: 'box-shadow 0.3s' }}
             >
-              <h2 className="text-xl font-bold text-blue-900 mb-2 flex items-center"><span className="mr-2">🤖</span>AI Features</h2>
+              <h2 className="text-xl font-bold text-blue-900 mb-2 flex items-center"><span className="mr-2">🤖</span>Turnify Features</h2>
               <ul className="list-disc pl-6 text-blue-900 text-base space-y-1">
                 <li>Automated return approval using AI risk analysis</li>
                 <li>AI-generated recommendations for manual review</li>
                 <li>Fraud detection and flagging of suspicious returns</li>
                 <li>Smart inventory optimization suggestions</li>
-                <li>Real-time AI status updates and explanations</li>
-                <li>Seamless SAP S/4 HANA integration</li>
+                <li>Real-time status updates and explanations</li>
+                <li>Seamless integration with Turnify's API</li>
                 <li>Configurable approval workflows and custom logic</li>
-                <li>Flexible product identifier support (UPC, EAN)</li>
+                <li>Flexible product identifier support (UPC, SKU)</li>
               </ul>
               <button
                 className="ml-2 px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded hover:bg-blue-200 transition mt-4"
