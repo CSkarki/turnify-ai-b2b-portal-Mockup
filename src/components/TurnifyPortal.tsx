@@ -864,12 +864,12 @@ const TurnifyPortal = () => {
       { label: 'Shipped', color: 'bg-blue-400', count: returnsData.filter(r => r.status === 'shipped').length },
     ];
     const barChart = (
-      <div className="w-full h-36 flex items-end gap-8 justify-center">
+      <div className="w-full h-48 flex items-end gap-3 sm:gap-4 justify-center px-1 sm:px-2">
         {statusData.map(({ label, color, count }) => (
-          <div key={label} className="flex flex-col items-center w-20">
-            <span className="text-lg font-bold mb-2">{count}</span>
-            <div className={`${color} w-10 rounded-t-lg shadow-md`} style={{ height: `${Math.max(count * 8, 16)}px` }}></div>
-            <span className="text-sm mt-3 text-center font-medium text-gray-700">{label}</span>
+          <div key={label} className="flex flex-col items-center flex-shrink-0 w-12 sm:w-14">
+            <span className="text-base sm:text-lg font-bold mb-1.5 sm:mb-2 text-gray-800">{count}</span>
+            <div className={`${color} w-6 sm:w-8 rounded-t-lg shadow-md transition-all hover:shadow-lg`} style={{ height: `${Math.max(count * 10, 20)}px` }}></div>
+            <span className="text-xs mt-2 sm:mt-3 text-center font-medium text-gray-700 leading-tight">{label}</span>
           </div>
         ))}
       </div>
@@ -997,9 +997,11 @@ const TurnifyPortal = () => {
           {/* Analytics Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-12">
             {/* Returns by Status Bar Chart */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center">
-              <h3 className="text-lg font-semibold mb-4 text-center w-full">Returns by Status</h3>
-              {barChart}
+            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col items-center w-full min-w-0">
+              <h3 className="text-lg font-semibold mb-3 sm:mb-4 text-center w-full">Returns by Status</h3>
+              <div className="w-full max-w-full overflow-hidden">
+                {barChart}
+              </div>
             </div>
             {/* Return Reasons Pie Chart (SVG, dynamic) */}
             <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center">
@@ -1016,9 +1018,9 @@ const TurnifyPortal = () => {
             <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center">
               <h3 className="text-lg font-semibold mb-4">Top Partners</h3>
               <div className="w-full space-y-2">
-                <div className="flex justify-between text-sm"><span>Tapri Store #001</span><span className="font-bold">45 returns</span></div>
+                <div className="flex justify-between text-sm"><span>Tapri Stores #001</span><span className="font-bold">45 returns</span></div>
                 <div className="flex justify-between text-sm"><span>Thela Express</span><span className="font-bold">38 returns</span></div>
-                <div className="flex justify-between text-sm"><span>CP Store Mumbai</span><span className="font-bold">29 returns</span></div>
+                <div className="flex justify-between text-sm"><span>CP Antiques</span><span className="font-bold">29 returns</span></div>
               </div>
             </div>
           </div>
